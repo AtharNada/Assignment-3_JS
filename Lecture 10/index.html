@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarker</title>
+    <script src="bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="header" class="h1 text-center py-4">Bookmarker</div>
+        <div id="subtitle" class="h3 text-center">Bookmark Your Favorite Sites</div>
+            <label class="py-2" for="sitename">Site Name</label>
+            <input class="form-control" type="text" name="sitename" id="bookName" placeholder="Bookmark Name">
+            <label class="py-2" for="sitelink">Site URL</label>
+            <input class="form-control mb-3" type="text" name="sitelink" id="siteLink" placeholder="Website URL">
+            <button onclick="addSites()" class="btn btn-danger">Submit</button>
+            <table class="table align-middle table-striped text-center table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>Index</th>
+                        <th>Website Name</th>
+                        <th>Visit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="myData">
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><button>visit</button></td>
+                        <td><button onclick="deleteSites()" class="btn-outline-danger">Delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
